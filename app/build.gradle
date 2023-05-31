@@ -77,7 +77,6 @@ dependencies {
     // Splash API
     implementation 'androidx.core:core-splashscreen:1.0.1'
 
-
     // Kodein
     implementation "org.kodein.di:kodein-di-generic-jvm:$kodein_version"
     implementation "org.kodein.di:kodein-di-framework-android-x:$kodein_version"

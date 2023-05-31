@@ -3,12 +3,15 @@ package com.example.murmur1.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.murmur1.databinding.FragmentCalenderviewerBinding
 import com.example.murmur1.databinding.ItemViewpagerBinding
 
 class ViewPagerAdapter(val images: List<Int>, ) : RecyclerView.Adapter<ViewPagerAdapter.ViewPagerViewHolder>() {
 
 
-    inner class ViewPagerViewHolder(val binding: ItemViewpagerBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class ViewPagerViewHolder(val binding: ItemViewpagerBinding) : RecyclerView.ViewHolder(binding.root){
+        val textView = FragmentCalenderviewerBinding.bind(binding.root)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewPagerViewHolder {
         return ViewPagerViewHolder(

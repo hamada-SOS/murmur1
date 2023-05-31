@@ -18,6 +18,13 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    compileOptions {
+        // Enable support for the new language APIs
+        coreLibraryDesugaringEnabled true
+        // Set Java compatibility (version can be higher if desired)
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     buildFeatures{
         viewBinding = true
@@ -68,6 +75,8 @@ dependencies {
     // New Material Design
     implementation "com.google.android.material:material:1.9.0"
 
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
+
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
@@ -76,6 +85,8 @@ dependencies {
 
     // Splash API
     implementation 'androidx.core:core-splashscreen:1.0.1'
+    implementation 'com.kizitonwose.calendar:view:2.0.1'
+
 
     // Kodein
     implementation "org.kodein.di:kodein-di-generic-jvm:$kodein_version"

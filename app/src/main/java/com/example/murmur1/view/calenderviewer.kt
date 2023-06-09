@@ -38,9 +38,9 @@ class calenderviewer : Fragment(R.layout.fragment_calenderviewer) {
     private val today = LocalDate.now()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        binding = FragmentCalenderviewerBinding.bind(view)
-//        val daysOfWeek = daysOfWeek()
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentCalenderviewerBinding.bind(view)
+        val daysOfWeek = daysOfWeek()
         binding.legendLayout.root.children
             .map { it as TextView }
             .forEachIndexed { index, textView ->

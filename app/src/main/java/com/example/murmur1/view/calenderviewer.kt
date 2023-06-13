@@ -43,7 +43,7 @@ class calenderviewer : Fragment(R.layout.fragment_calenderviewer) {
         val daysOfWeek = daysOfWeek()
         binding.legendLayout.root.children
             .map { it as TextView }
-            .forEachIndexed { index, textView ->
+//            .forEachIndexed { index, textView ->
                 textView.text = daysOfWeek[index].displayText()
                 textView.setTextColorRes(R.color.example_1_white)
             }
